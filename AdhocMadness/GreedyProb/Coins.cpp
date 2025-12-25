@@ -11,10 +11,19 @@ int main() {
     int n, s;
     cin >> n >> s;
     int ans = 0;
-    ans = s / n;
-    if (s % n >= 1) {
-        ++ans;
-    }
+    // while(s >= n) {
+    //     ++ans;
+    //     s -= n;
+    //     // n -= s;
+    // }
+    // if (s >= 1) {
+    //     ++ans;
+    // }
+    // ans = s / n; 
+    // if (s % n >= 1) {
+    //     ++ans;
+    // }
+    ans = ceil((double)s/n);
     cout << ans << "\n";
     return 0;
 }
