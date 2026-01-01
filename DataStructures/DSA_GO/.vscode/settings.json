@@ -1,0 +1,5 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "problems.showCurrentInStatus": true,
+    "notebook.output.minimalErrorRendering": false
+}
