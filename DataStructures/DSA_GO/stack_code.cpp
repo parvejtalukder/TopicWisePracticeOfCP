@@ -8,7 +8,15 @@ void pht() {
 
 int main() {
     pht();
+    // last in first out
     stack <int> st;
-    
+    st.push(5);
+    st.push(4);
+    st.push(3);
+    // st.pop();
+    while(!st.empty()) {
+        cout << st.top() << "\n";
+        st.pop();
+    }
     return 0;
 }
