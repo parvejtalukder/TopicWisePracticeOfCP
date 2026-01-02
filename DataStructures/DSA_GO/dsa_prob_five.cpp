@@ -22,9 +22,7 @@ int main() {
         for(int i = 0; i < n; i++) {
             cin >> m[i].first >> m[i].second;
         }
-
         sort(m.begin(), m.end(), cmp); 
-
         for(int i = 0; i < n; i++) {
             cout << m[i].first << " " << m[i].second << "\n";
         }
