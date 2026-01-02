@@ -6,24 +6,28 @@ void pht() {
     cin.tie(nullptr);
 }
 
+bool cmp(const pair<int,int> &p1, const pair<int,int> &p2) {
+    if (p1.first != p2.first) return p1.first < p2.first; 
+    return p1.second > p2.second; 
+}
+
 int main() {
     pht();
-    int t; 
+    int t;
     cin >> t;
     while(t--) {
         int n;
         cin >> n;
-        vector<pair<int,int>> m(n);  
+        vector<pair<int,int>> m(n);
         for(int i = 0; i < n; i++) {
-            int a, b;
-            cin >> a >> b;
-            m[i] = {a, b}; 
+            cin >> m[i].first >> m[i].second;
         }
-        sort(m.begin(), m.end()); 
+
+        sort(m.begin(), m.end(), cmp); 
+
         for(int i = 0; i < n; i++) {
-            cout << m[i].first << " ";  
+            cout << m[i].first << " " << m[i].second << "\n";
         }
-        cout << "\n"
     }
     return 0;
 }
