@@ -7,15 +7,16 @@ void pht() {
     cout.tie(nullptr);
 }
 
+bool camp(pair<int, int> x, pair<int, int> y) {
+    return x >= y;
+}
+
 int main() {
     pht();
-    long long n;
-    cin >> n;
-    // if (sqrt(n)) 
-    if ((n & (n - 1) )== 0) {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
+    vector <pair<int, int>> prr = {{1, 2}, {2, 1}, {1, 3}, {3, 1}, {9, 2}, {2, 5}};
+    sort(prr.begin(), prr.end(), camp);
+    for(auto [x, y]: prr) {
+        cout << x << " " << y << "\n";
     }
     return 0;
 }
