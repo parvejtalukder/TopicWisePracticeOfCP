@@ -20,5 +20,14 @@ int main() {
     sort(arr.begin(), arr.end(), [](pair <int, int> x, pair <int, int> y){
         return x.second < y.second;
     });
+    int max_y = -1, ans = 0;
+    for(auto [x, y]: arr) {
+        if (x >= max_y) {
+            max_y = y;
+            ++ans;
+        }
+        // cout << x << " " << y << "\n";
+    }
+    cout << ans << "\n";
     return 0;
 }
