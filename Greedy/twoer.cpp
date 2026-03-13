@@ -11,18 +11,20 @@ int main() {
     pht();
     int n;
     cin >> n;
-    int arr[n];
+    multiset <int> twar;
     for(int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-    int ans = 1;
-    int last = arr[0];
-    for(int i = 1; i < n; i++) {
-        if (arr[i] > last) {
-            ans++;
-            last = arr[i];
+        // cin >> arr[i];
+        int x;
+        cin >> x;
+        // twar.insert(x);
+        auto it = twar.upper_bound(x);
+        if (it != twar.end()) {
+            twar.erase(it);
+            twar.insert(x);
+        } else {
+            twar.insert(x);
         }
     }
-    cout << ans << "\n";
+    cout << twar.size() << "\n";
     return 0;
 }
