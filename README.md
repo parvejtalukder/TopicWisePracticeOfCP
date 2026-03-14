@@ -1,6 +1,6 @@
 # TopicWisePracticeOfCP
 
-A comprehensive collection of **competitive programming problems**, organized by topic, curated and maintained by **Parvej Husen Talukder**. This repository serves as a personal practice log and a resource for anyone looking to improve their problem-solving skills in **C++** and **Python**.
+A comprehensive collection of **competitive programming problems**, organized by topic, curated and maintained by **Parvej Husen Talukder**. This repository serves as a personal practice log and a resource for anyone looking to improve their problem-solving skills in **C++**.
 
 ## 📂 Repository Structure
 
