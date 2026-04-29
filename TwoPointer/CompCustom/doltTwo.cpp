@@ -7,19 +7,12 @@ void pht() {
     cout.tie(nullptr);
 }
 
-bool cmp(pair<int, int>x,pair<int, int>y) {
-    if (x.second != y.second) {
-        return x.second < y.second;
-    } 
-    return x.first < y.first;
-}
-
 int main() {
     pht();
     vector <pair<int, int>> arr = {
         {1,1}, {2,3}, {3,1}, {4,5}, {5,2}, {6,1}, {7,8}
     };
-    sort(arr.begin(), arr.end(), cmp);
+    // sort(arr.begin(), arr.end(), cmp);
     for(auto [x, y]: arr) {
         cout << x << " " << y << "\n";
     }
