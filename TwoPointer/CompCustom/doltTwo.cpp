@@ -9,12 +9,21 @@ void pht() {
 
 int main() {
     pht();
-    vector <pair<int, int>> arr = {
-        {1,1}, {2,3}, {3,1}, {4,5}, {5,2}, {6,1}, {7,8}
-    };
-    // sort(arr.begin(), arr.end(), cmp);
-    for(auto [x, y]: arr) {
-        cout << x << " " << y << "\n";
+    long long n;
+    cin >> n;
+    cin.ignore();
+    vector <string> str;
+    while(n--) {
+        string s;
+        cin >> s;
+        str.push_back(s);
     }
+    sort(str.begin(), str.end(), [](string a, string b) {
+        return a + b < b + a;
+    });
+    for(auto one: str) {
+        cout << one;
+    }
+    cout << "\n";
     return 0;
 }
